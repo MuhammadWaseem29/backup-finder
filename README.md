@@ -23,8 +23,7 @@ Noob-Wasi is an advanced open-source tool designed for cybersecurity professiona
 
 ```bash
 git clone https://github.com/MuhammadWaseem29/backup-finder.git
-cd backup-finder
-```
+cd backup-finder```
 
 ### Install Dependencies
 
