@@ -1,6 +1,6 @@
 
 
-```markdown
+```bash
 # Noob-Wasi: Backup File Finder
 
 Noob-Wasi is an advanced open-source tool designed for cybersecurity professionals to find exposed backup files, configuration files, and sensitive information across a wide range of web servers, cloud platforms, and content management systems (CMS). It supports scanning for over 200 backup file extensions.
