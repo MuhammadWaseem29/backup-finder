@@ -1,128 +1,116 @@
 
 
-```markdown
-# Noob-Wasi: A Powerful Backup File Scanner
+Noob-Wasi: Backup File Finder
 
-**Noob-Wasi** is a powerful tool created by **Muhammad Waseem** to scan URLs or files for common backup files. This script helps cybersecurity professionals, bug bounty hunters, and penetration testers identify backup files and configurations that could be exposed to the internet. 
-
-The tool supports scanning for backup files across various platforms, including cloud services (AWS, Azure), web servers (Nginx, Apache), and content management systems (WordPress).
+Noob-Wasi is an advanced open-source tool designed for cybersecurity professionals to find exposed backup files, configuration files, and sensitive information across a wide range of web servers, cloud platforms, and content management systems (CMS). It supports scanning for over 200 backup file extensions.
 
 ---
 
-## Features
+Features
 
-- Scans a single URL or multiple URLs from a file for exposed backup files.
-- Supports a wide range of backup file extensions, including cloud, CMS, and server configurations.
-- Colorful and easy-to-read output for success, failure, and access restrictions.
-- Option to save output to a file for future analysis.
-- Useful for bug bounty hunters and penetration testers.
-
----
-
-## Installation
-
-1. Clone the repository:
-    ```bash
-    git clone https://github.com/MuhammadWaseem29/backup-finder.git
-    cd backup-finder
-    ```
-
-2. Install the required Python libraries (manually via pip):
-    ```bash
-    pip install requests termcolor
-    ```
+- Backup File Detection: Detects exposed backup files from cloud platforms (AWS, Azure), web servers (Apache, Nginx), CMS (WordPress, Joomla), and more.
+- Comprehensive Extension List: Scans a wide variety of backup file extensions such as .bak, .zip, .sql, .tar.gz, and more.
+- Fast Scanning: Optimized to scan multiple URLs quickly and efficiently.
+- Customizable Output: Option to output results to a file. Supports colorful, easy-to-read terminal output.
+- Simple CLI: Designed with simplicity in mind, allowing users to scan websites using a few simple commands.
 
 ---
 
-## Usage
+Installation
 
-### Scan a Single URL
+Clone the Repository
 
-To scan a single URL for backup files:
+git clone https://github.com/MuhammadWaseem29/backup-finder.git
+cd backup-finder
 
-```bash
+Install Dependencies
+
+pip install -r requirements.txt
+
+---
+
+Usage
+
+Scan a Single URL
+
 python noob-wasi.py -u http://example.com
-```
 
-### Scan Multiple URLs from a File
+Scan Multiple URLs from a File
 
-To scan URLs listed in a text file (`urls.txt`), use:
-
-```bash
 python noob-wasi.py -f urls.txt
-```
 
-### Save Output to a File
+Scan a URL and Save Results to a File
 
-To save the results to an output file:
-
-```bash
 python noob-wasi.py -u http://example.com -o output.txt
-```
 
-### Enable Colorful Output
+Enable Colorful Output (Default)
 
-To enable colorful output (default is enabled):
+Colorful output is enabled by default, but you can explicitly enable it with:
 
-```bash
 python noob-wasi.py -u http://example.com -c
-```
 
-### Verbose Output
+Enable Verbose Output
 
-Enable verbose output for detailed information:
-
-```bash
 python noob-wasi.py -u http://example.com -v
-```
 
 ---
 
-## Supported Extensions
+Supported Extensions
 
-- **Cloud Platforms:** AWS, Azure, GCP, DigitalOcean, etc.
-- **CMS Platforms:** WordPress, Joomla, Drupal, etc.
-- **Web Servers:** Nginx, Apache, IIS.
-- **Backup Files:** `.bak`, `.tar.gz`, `.zip`, `.sql`, `.env`, `.bak1`, `.swp`, `.dmp`, and many more.
+Noob-Wasi detects backup files from various platforms, including:
 
-The tool supports over **200 different extensions** related to backup files across various platforms.
+- Cloud Platforms: AWS, Azure, Google Cloud, DigitalOcean
+- Web Servers: Apache, Nginx, IIS
+- CMS: WordPress, Joomla, Drupal
+- Backup File Types: .bak, .zip, .tar.gz, .sql, .env, .dmp, .swp, and more.
+
+It currently supports over 200 extensions.
 
 ---
 
-## Example Output
+Example Output
 
-When running the script, the output will be colorful, showing results for each URL or file scanned:
+When running Noob-Wasi, you'll get a clear and colorful output indicating the presence of backup files:
 
-```bash
 Scanning URL: http://example.com
-Backup file found: http://example.com/.env (Status Code: 200) [green]
-Backup file not found: http://example.com/.bak (Status Code: 404) [red]
-```
+Backup file found: http://example.com/.env (Status Code: 200) [Green]
+Backup file not found: http://example.com/.bak (Status Code: 404) [Red]
 
 ---
 
-## Contributing
+Contributing
 
-Contributions are welcome! Feel free to fork the repository and create pull requests.
+We welcome contributions to Noob-Wasi! Please follow these steps to contribute:
 
-### Steps to Contribute:
 1. Fork the repository.
-2. Create a new branch (`git checkout -b feature-xyz`).
-3. Make your changes and commit them (`git commit -m 'Add feature XYZ'`).
-4. Push to the branch (`git push origin feature-xyz`).
-5. Open a pull request.
+2. Create a new branch for your feature or bug fix:
+   git checkout -b feature-name
+3. Commit your changes:
+   git commit -m 'Add feature XYZ'
+4. Push to your forked repository:
+   git push origin feature-name
+5. Create a pull request to the main repository.
+
+Make sure to write clear commit messages and provide proper documentation for new features.
 
 ---
 
-## License
+License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the LICENSE file for details.
 
 ---
 
-## Disclaimer
+Disclaimer
 
-This tool is intended for educational purposes and ethical hacking. Do not use it on websites or systems without proper authorization. The creator of this tool is not responsible for any misuse or damage caused by the use of this script.
-```
+Noob-Wasi is intended for educational purposes and authorized security testing only. Unauthorized usage or scanning of websites without permission is illegal and unethical. Always ensure you have explicit authorization before scanning systems.
 
-This version of the README excludes the **requirements.txt** section but includes manual installation instructions for the required libraries (`requests` and `termcolor`).
+The creator, Muhammad Waseem, is not responsible for any misuse, damage, or legal consequences that result from the use of this tool.
+
+---
+
+Author
+
+Muhammad Waseem is the creator and maintainer of Noob-Wasi.
+
+---
